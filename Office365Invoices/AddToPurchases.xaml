@@ -1,0 +1,250 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AddToPurchases" this:AddToPurchases.in_month="10" this:AddToPurchases.in_nit="900934977" this:AddToPurchases.in_documentType="Factura" this:AddToPurchases.in_cost="0" this:AddToPurchases.in_currency="COP" this:AddToPurchases.in_year="2020" this:AddToPurchases.in_docPath="TempPDF\face_f09005617615f490baa93.pdf" this:AddToPurchases.in_companyDocType="NIT" this:AddToPurchases.in_Date="13/09/2019" this:AddToPurchases.in_company="Ingram Micro SAS" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:s2="clr-namespace:System;assembly=System" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sae="clr-namespace:System.Activities.Expressions;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sas="clr-namespace:System.Activities.Statements;assembly=System.Activities" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sc1="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System" xmlns:sd="clr-namespace:System.Data;assembly=System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd2="clr-namespace:System.Diagnostics;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sd3="clr-namespace:System.Drawing;assembly=System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" xmlns:sd4="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sx="clr-namespace:System.Xml;assembly=System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.Core;assembly=UiPath.System.Activities" xmlns:uc1="clr-namespace:UiPath.Core;assembly=UiPath.UiAutomation.Activities" xmlns:uca="clr-namespace:UiPath.Core.Activities;assembly=UiPath.System.Activities" xmlns:uca1="clr-namespace:UiPath.Core.Activities;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_month" Type="InArgument(x:String)" />
+    <x:Property Name="in_nit" Type="InArgument(x:String)" />
+    <x:Property Name="in_documentType" Type="InArgument(x:String)" />
+    <x:Property Name="in_cost" Type="InArgument(x:Double)" />
+    <x:Property Name="in_iva" Type="InArgument(x:Double)" />
+    <x:Property Name="in_currency" Type="InArgument(x:String)" />
+    <x:Property Name="in_year" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_docPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_companyDocType" Type="InArgument(x:String)" />
+    <x:Property Name="in_Date" Type="InArgument(x:String)" />
+    <x:Property Name="in_company" Type="InArgument(x:String)" />
+    <x:Property Name="in_docNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_otrosCostos" Type="InArgument(x:Double)" />
+    <x:Property Name="in_retenciones" Type="InArgument(x:Double)" />
+    <x:Property Name="in_day" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>865.6,4370.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+  <TextExpression.NamespacesForImplementation>
+    <scg1:List x:TypeArguments="x:String" Capacity="12">
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg1:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg1:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+    </scg1:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AddToPurchases" sap:VirtualizedContainerService.HintSize="845.6,4310.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s1:String[]" Default="[{&quot;ENERO&quot;,&quot;FEBRERO&quot;,&quot;MARZO&quot;,&quot;ABRIL&quot;,&quot;MAYO&quot;,&quot;JUNIO&quot;,&quot;JULIO&quot;,&quot;AGOSTO&quot;,&quot;SEPTIEMBRE&quot;,&quot;OCTUBRE&quot;,&quot;NOVIEMBRE&quot;,&quot;DICIEMBRE&quot;}]" Name="meses" />
+      <Variable x:TypeArguments="x:String" Name="folder" />
+      <Variable x:TypeArguments="s1:String[]" Default="[{&quot;ENE&quot;,&quot;FEB&quot;,&quot;MAR&quot;,&quot;ABR&quot;,&quot;MAY&quot;,&quot;JUN&quot;,&quot;JUL&quot;,&quot;AGO&quot;,&quot;SEP&quot;,&quot;OCT&quot;,&quot;NOV&quot;,&quot;DIC&quot;}]" Name="meses3char" />
+      <Variable x:TypeArguments="x:Double" Name="total" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="mesSigla" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="contador" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg1:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Create excel file if doesn't exist" sap:VirtualizedContainerService.HintSize="804,1031.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="FileExists" />
+        <Variable x:TypeArguments="x:Boolean" Name="folderExists" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:PathExists DisplayName="Path Exists" Exists="[folderExists]" sap:VirtualizedContainerService.HintSize="528,90.4" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[&quot;C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\&quot;+in_year.ToString]" PathType="Folder" />
+      <If Condition="[not folderExists]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="528,328" sap2010:WorkflowViewState.IdRef="If_4">
+        <If.Then>
+          <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="375.2,178.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg1:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[&quot;C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\&quot;+in_year.ToString]" />
+          </Sequence>
+        </If.Then>
+      </If>
+      <ui:PathExists DisplayName="Path Exists" Exists="[FileExists]" sap:VirtualizedContainerService.HintSize="528,90.4" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[&quot;C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\&quot;+in_year.ToString+&quot;\Reporte de compras &quot;+in_year.ToString+&quot;.xlsx&quot;]" PathType="File" />
+      <If Condition="[Not FileExists]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="528,309.6" sap2010:WorkflowViewState.IdRef="If_3">
+        <If.Then>
+          <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\&quot;+in_year.ToString+&quot;\Reporte de compras &quot;+in_year.ToString+&quot;.xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="384,160" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="False" Path="C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\plantilla.xlsx" />
+        </If.Then>
+      </If>
+    </Sequence>
+    <Sequence DisplayName="Create folder if doesn't exist" sap:VirtualizedContainerService.HintSize="804,660.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="folderExists" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[folder]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\"+in_year.ToString+"\"+in_month+"-"+meses(convert.ToInt16(in_month)-1)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:PathExists DisplayName="Path Exists" Exists="[folderExists]" sap:VirtualizedContainerService.HintSize="483.2,90.4" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[folder]" PathType="Folder" />
+      <If Condition="[not folderExists]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="483.2,235.2" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Then>
+          <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[folder]" />
+        </If.Then>
+      </If>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="483.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[folder]" />
+    </Sequence>
+    <Sequence DisplayName="Move File" sap:VirtualizedContainerService.HintSize="804,1695.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="s1:String[]" Name="MonthSplited" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="hacerCiclo" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="fileName" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="655.2,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="ui:GenericValue">[mesSigla]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="ui:GenericValue">[meses3char( convert.ToInt16(in_month)-1 )]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="655.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[mesSigla]" />
+      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="655.2,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="ui:GenericValue">[contador]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="ui:GenericValue">[1]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="655.2,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="ui:GenericValue">[hacerCiclo]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="ui:GenericValue">[true]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <DoWhile DisplayName="Hacer mientras" sap:VirtualizedContainerService.HintSize="655.2,595.2" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+        <DoWhile.Variables>
+          <Variable x:TypeArguments="x:Boolean" Name="Existe" />
+        </DoWhile.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg1:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <DoWhile.Condition>[hacerCiclo]</DoWhile.Condition>
+        <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="610.4,432.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg1:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:PathExists DisplayName="Path Exists" Exists="[Existe]" sap:VirtualizedContainerService.HintSize="568.8,90.4" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[folder+&quot;\&quot;+mesSigla+in_day+&quot;-&quot;+contador+&quot;.pdf&quot;]" PathType="File" />
+          <If Condition="[Existe]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="568.8,209.6" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[contador]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="ui:GenericValue">[contador+1]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+            <If.Else>
+              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[hacerCiclo]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="ui:GenericValue">[false]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Else>
+          </If>
+        </Sequence>
+      </DoWhile>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="655.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[folder+&quot;\&quot;+mesSigla+in_day+&quot;-&quot;+contador+&quot;.pdf&quot;]" />
+      <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="655.2,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+        <Assign.To>
+          <OutArgument x:TypeArguments="ui:GenericValue">[fileName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="ui:GenericValue">[in_docPath.Replace("TempPDF\","")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <WriteLine DisplayName="Escribir línea" sap:VirtualizedContainerService.HintSize="655.2,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;archivo: &quot;+fileName]" />
+      <ui:MoveFile ContinueOnError="{x:Null}" Destination="[folder+&quot;\&quot;+mesSigla+in_day+&quot;-&quot;+contador+&quot;.pdf&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="655.2,160" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[in_docPath]" />
+      <Assign sap:VirtualizedContainerService.HintSize="655.2,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Double">[total]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Double">[in_cost]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="Add row to the table" sap:VirtualizedContainerService.HintSize="804,710.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd4:DataTable" Name="Tabla" />
+        <Variable x:TypeArguments="x:String" Name="salida" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BuildDataTable DataTable="[Tabla]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="762.4,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;_x0023__x0020_C._x0020_DE_x0020_EGRESO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FECHA&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;COMPRADO_x0020_A&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NIT&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TIPO_x0020_DE_x0020_DOCUMENTO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DOCUMENTO_x0020__x0023_&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VALOR_x0020_BASE&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;IVA_x0020_19_x0025_&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OTROS_x0020_IMPUESTOS&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RETENCIONES&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VALOR_x0020_TOTAL&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ARCHIVO&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;&quot;,in_date, in_company , in_nit  ,  in_documentType , in_docNumber  , in_cost.ToString    , in_iva.ToString   , in_otrosCostos.ToString ,  in_retenciones.ToString,total.ToString , mesSigla+in_day+&quot;-&quot;+contador+&quot;.pdf&quot;}]" DataTable="[Tabla]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="762.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+      <ui:OutputDataTable DataTable="[Tabla]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="762.4,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[salida]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="762.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[salida]" />
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="762.4,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Visible="False" WorkbookPath="[&quot;C:\Users\wgome\OneDrive - Tecactiva\CONTABLE\COMPRAS\&quot;+in_year.ToString+&quot;\Reporte de compras &quot;+in_year.ToString+&quot;.xlsx&quot;]">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg1:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelAppendRange DataTable="[Tabla]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_1" SheetName="[meses(convert.ToInt16(in_month)-1)]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+      </ui:ExcelApplicationScope>
+    </Sequence>
+  </Sequence>
+</Activity>
